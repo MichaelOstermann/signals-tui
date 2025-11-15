@@ -1,0 +1,7 @@
+import type { List } from "./types"
+import { peek } from "@monstermann/signals"
+import { scrollDownBy } from "./scrollDownBy"
+
+export function scrollDownHalfPage(list: List): void {
+    return scrollDownBy(list, Math.floor(peek(list.height) / 2))
+}

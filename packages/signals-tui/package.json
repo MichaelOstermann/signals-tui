@@ -1,0 +1,42 @@
+{
+    "name": "@monstermann/signals-tui",
+    "type": "module",
+    "version": "0.0.0",
+    "description": "Declarative TUI framework using signals.",
+    "author": "Michael Ostermann <michaelostermann@me.com>",
+    "license": "MIT",
+    "homepage": "https://MichaelOstermann.github.io/signals-tui",
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/MichaelOstermann/signals-tui.git"
+    },
+    "bugs": {
+        "url": "https://github.com/MichaelOstermann/signals-tui/issues"
+    },
+    "keywords": [],
+    "sideEffects": false,
+    "exports": {
+        ".": {
+            "types": "./dist/index.d.ts",
+            "import": "./dist/index.js"
+        }
+    },
+    "main": "./dist/index.js",
+    "module": "./dist/index.js",
+    "types": "./dist/index.d.ts",
+    "files": [
+        "dist"
+    ],
+    "scripts": {
+        "bundle": "tsdown",
+        "release": "bun publish --access public"
+    },
+    "dependencies": {
+        "@monstermann/signals": "^0.0.0",
+        "@types/node": "^24.10.1",
+        "get-east-asian-width": "^1.4.0",
+        "p-defer": "^4.0.1",
+        "signal-exit": "^4.1.0",
+        "strip-ansi": "^7.1.2"
+    }
+}
