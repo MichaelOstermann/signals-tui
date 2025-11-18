@@ -1,7 +1,7 @@
 {
     "name": "@monstermann/signals-tui",
     "type": "module",
-    "version": "0.0.0",
+    "version": "0.1.0",
     "description": "Declarative TUI framework using signals.",
     "author": "Michael Ostermann <michaelostermann@me.com>",
     "license": "MIT",
