@@ -1,4 +1,4 @@
-import type { Cell, FrameBuffer } from "./types"
+import type { Cell, FrameBuffer } from "."
 import { Ansi } from "../Ansi"
 import { Style } from "../Style"
 import { EMPTY } from "./internals"

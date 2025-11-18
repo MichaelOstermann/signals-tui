@@ -1,4 +1,4 @@
-import type { Spinner, SpinnerOptions } from "./types"
+import type { Spinner, SpinnerOptions } from "."
 import { effect, memo, peek, signal } from "@monstermann/signals"
 import { Text } from "../Text"
 

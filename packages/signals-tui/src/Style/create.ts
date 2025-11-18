@@ -1,4 +1,4 @@
-import type { Style } from "./types"
+import type { Style } from "."
 import { hash } from "./hash"
 
 const cache = new Map<string, Style>()

@@ -1,4 +1,4 @@
-import type { List } from "./types"
+import type { List } from "."
 import { peek } from "@monstermann/signals"
 import { isSelectable } from "./isSelectable"
 import { prevSelectable } from "./prevSelectable"

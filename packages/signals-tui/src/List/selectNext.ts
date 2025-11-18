@@ -1,4 +1,4 @@
-import type { List } from "./types"
+import type { List } from "."
 import { peek } from "@monstermann/signals"
 import { nextSelectable } from "./nextSelectable"
 import { select } from "./select"

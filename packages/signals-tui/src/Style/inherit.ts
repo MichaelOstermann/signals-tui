@@ -1,4 +1,4 @@
-import type { Style } from "./types"
+import type { Style } from "."
 import { create } from "./create"
 
 export function inherit(target: Style, source: Style | undefined): Style {

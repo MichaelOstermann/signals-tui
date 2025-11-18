@@ -1,4 +1,4 @@
-import type { Text } from "./types"
+import type { Text } from "."
 import { Style } from "../Style"
 import { symbol } from "./internals"
 

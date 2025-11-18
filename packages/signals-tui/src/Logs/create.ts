@@ -1,6 +1,6 @@
+import type { Logs, LogsOptions } from "."
 import type { Token } from "../Data/internals/Tokenizer"
 import type { Style } from "../Style"
-import type { Logs, LogsOptions } from "./types"
 import { effect, memo, readOr, signal, untrack } from "@monstermann/signals"
 import { Box } from "../Box"
 import { Data } from "../Data"

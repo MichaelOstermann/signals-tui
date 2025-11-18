@@ -1,5 +1,5 @@
+import type { FrameBuffer } from "."
 import type { Text } from "../Text"
-import type { FrameBuffer } from "./types"
 import { Char } from "../Char"
 import { Chars } from "../Chars"
 import { EMPTY, WIDE_CONTINUATION } from "./internals"

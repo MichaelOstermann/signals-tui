@@ -1,4 +1,4 @@
-import type { List } from "./types"
+import type { List } from "."
 import { isSelectable } from "./isSelectable"
 import { nextSelectable } from "./nextSelectable"
 import { select } from "./select"

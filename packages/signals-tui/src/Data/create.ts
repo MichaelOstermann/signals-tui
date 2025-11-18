@@ -1,4 +1,4 @@
-import type { Data, DataOptions } from "./types"
+import type { Data, DataOptions } from "."
 import { memo, read, readOr, signal } from "@monstermann/signals"
 import { Tokenizer } from "./internals/Tokenizer"
 

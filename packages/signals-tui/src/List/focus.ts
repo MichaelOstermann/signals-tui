@@ -1,4 +1,4 @@
-import type { List } from "./types"
+import type { List } from "."
 import { untrack } from "@monstermann/signals"
 import { Term } from "../Term"
 

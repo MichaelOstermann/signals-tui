@@ -1,4 +1,4 @@
-import type { Box, BoxOptions } from "./types"
+import type { Box, BoxOptions } from "."
 import { memo, readOr } from "@monstermann/signals"
 import { Element } from "../Element"
 import { clamp } from "../helpers"

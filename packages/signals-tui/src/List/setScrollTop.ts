@@ -1,4 +1,4 @@
-import type { List } from "./types"
+import type { List } from "."
 import { batch, peek } from "@monstermann/signals"
 import { constrain } from "./internals"
 

@@ -1,4 +1,4 @@
-import type { FrameBuffer } from "./types"
+import type { FrameBuffer } from "."
 import { Term } from "../Term"
 import { EMPTY } from "./internals"
 

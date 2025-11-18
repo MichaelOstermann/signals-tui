@@ -1,4 +1,4 @@
-import type { List } from "./types"
+import type { List } from "."
 import { isSelectable } from "./isSelectable"
 
 export function nextSelectable(list: List, idx: number): number {

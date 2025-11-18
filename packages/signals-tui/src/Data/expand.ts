@@ -1,4 +1,4 @@
-import type { Data } from "./types"
+import type { Data } from "."
 
 export function expand(data: Data, path: string): void {
     data.expanded((paths) => {

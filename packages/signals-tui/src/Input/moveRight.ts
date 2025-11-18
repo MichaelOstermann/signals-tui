@@ -1,4 +1,4 @@
-import type { Input } from "./types"
+import type { Input } from "."
 import { Chars } from "../Chars"
 
 export function moveRight(input: Input, boundary: "char" | "word" | "line"): void {

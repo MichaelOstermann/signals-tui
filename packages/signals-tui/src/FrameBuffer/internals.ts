@@ -1,4 +1,4 @@
-import type { Cell } from "./types"
+import type { Cell } from "."
 import { Style } from "../Style"
 
 export const EMPTY: Cell = {

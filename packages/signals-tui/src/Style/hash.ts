@@ -1,4 +1,4 @@
-import type { Style } from "./types"
+import type { Style } from "."
 
 export function hash(style: Style): string {
     return [

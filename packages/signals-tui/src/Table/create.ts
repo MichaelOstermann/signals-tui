@@ -1,4 +1,4 @@
-import type { Table, TableOptions } from "./types"
+import type { Table, TableOptions } from "."
 import { memo, read, readOr } from "@monstermann/signals"
 import { Element } from "../Element"
 import { Line } from "../Line"

@@ -1,4 +1,4 @@
-import type { List, ListItem, ListOptions } from "./types"
+import type { List, ListItem, ListOptions } from "."
 import { batch, effect, memo, onCleanup, readOr, signal } from "@monstermann/signals"
 import { Element } from "../Element"
 import { Key } from "../Key"

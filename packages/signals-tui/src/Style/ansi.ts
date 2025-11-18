@@ -1,4 +1,4 @@
-import type { Color, Style } from "./types"
+import type { Color, Style } from "."
 
 export function ansi(style: Style): string {
     const ansi = [

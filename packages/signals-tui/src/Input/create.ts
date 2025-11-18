@@ -1,4 +1,4 @@
-import type { Input, InputOptions } from "./types"
+import type { Input, InputOptions } from "."
 import { effect, memo, onCleanup, readOr, signal } from "@monstermann/signals"
 import { Element } from "../Element"
 import { clamp } from "../helpers"

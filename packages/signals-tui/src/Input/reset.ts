@@ -1,4 +1,4 @@
-import type { Input } from "./types"
+import type { Input } from "."
 import { batch } from "@monstermann/signals"
 
 export function reset(input: Input): void {

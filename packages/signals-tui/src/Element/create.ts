@@ -1,6 +1,6 @@
 import type { Signal } from "@monstermann/signals"
+import type { Element, ElementOptions } from "."
 import type { KeyEvent, MouseEvent, PasteEvent } from "../types"
-import type { Element, ElementOptions } from "./types"
 import { effect, emitter, memo, onCleanup, peek, readOr, signal, watch } from "@monstermann/signals"
 import { clamp } from "../helpers"
 import { Term } from "../Term"

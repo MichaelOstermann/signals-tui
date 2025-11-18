@@ -1,4 +1,4 @@
-import type { Input } from "./types"
+import type { Input } from "."
 import { batch } from "@monstermann/signals"
 import { reset } from "./reset"
 import { write } from "./write"
