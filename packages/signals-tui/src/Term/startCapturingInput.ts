@@ -10,29 +10,17 @@ import { write } from "./write"
 const mouseParser = new MouseParser() // TODO
 
 export function startCapturingInput(): Dispose {
-    const isRaw = process.stdin.isRaw
-    const encoding = process.stdin.readableEncoding
-    const paused = process.stdin.isPaused()
-
     process.stdin.setRawMode(true)
     process.stdin.setEncoding("utf8")
     process.stdin.resume()
     write(Ansi.enableFocusTracking)
     write(Ansi.enableBracketedPasteTracking)
-    write("\x1B[?1000h")
-    write("\x1B[?1006h")
+    write(Ansi.enableMouseTracking)
+    write(Ansi.enableButtonEventTracking)
+    write(Ansi.enableAnyEventTracking)
+    write(Ansi.enableSGRMouseMode)
     process.stdin.on("data", handleInput)
-
-    return () => {
-        process.stdin.setRawMode(isRaw)
-        process.stdin.setEncoding(encoding ?? undefined)
-        if (paused) process.stdin.pause()
-        write(Ansi.disableFocusTracking)
-        write(Ansi.disableBracketedPasteTracking)
-        write("\x1B[?1000l")
-        write("\x1B[?1006l")
-        process.stdin.off("data", handleInput)
-    }
+    return stopCapturingInput
 }
 
 export function stopCapturingInput(): void {
@@ -41,8 +29,10 @@ export function stopCapturingInput(): void {
     process.stdin.pause()
     write(Ansi.disableFocusTracking)
     write(Ansi.disableBracketedPasteTracking)
-    write("\x1B[?1000l")
-    write("\x1B[?1006l")
+    write(Ansi.disableMouseTracking)
+    write(Ansi.disableButtonEventTracking)
+    write(Ansi.disableAnyEventTracking)
+    write(Ansi.disableSGRMouseMode)
     process.stdin.off("data", handleInput)
 }
 
