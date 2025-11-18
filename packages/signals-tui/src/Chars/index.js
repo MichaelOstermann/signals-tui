@@ -4,6 +4,7 @@
 // dprint-ignore-file
 // biome-ignore lint: disable
 
+import { create } from "./create.js";
 import { fillAround } from "./fillAround.js";
 import { fillLeft } from "./fillLeft.js";
 import { fillRight } from "./fillRight.js";
@@ -14,6 +15,7 @@ import { truncateRight } from "./truncateRight.js";
 import { width } from "./width.js";
 
 export const Chars = {
+    create,
     fillAround,
     fillLeft,
     fillRight,

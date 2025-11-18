@@ -141,6 +141,7 @@ export default defineConfig({
                     { link: "width", text: "width" },
                 ] },
                 { base: "/Chars/", collapsed: true, text: "Chars", items: [
+                    { link: "create", text: "create" },
                     { link: "fillAround", text: "fillAround" },
                     { link: "fillLeft", text: "fillLeft" },
                     { link: "fillRight", text: "fillRight" },

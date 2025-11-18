@@ -5,5 +5,5 @@ export function fillAround(
     width: number,
     value: string = " ",
 ): string {
-    return Chars.fillAround([...str], width, value).join("")
+    return Chars.fillAround(Chars.create(str), width, value).join("")
 }

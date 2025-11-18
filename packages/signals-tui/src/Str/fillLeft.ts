@@ -5,5 +5,5 @@ export function fillLeft(
     width: number,
     value: string = " ",
 ): string {
-    return Chars.fillLeft([...str], width, value).join("")
+    return Chars.fillLeft(Chars.create(str), width, value).join("")
 }

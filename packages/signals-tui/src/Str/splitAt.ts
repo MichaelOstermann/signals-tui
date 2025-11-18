@@ -1,7 +1,8 @@
 import { Char } from "../Char"
+import { Chars } from "../Chars"
 
 export function splitAt(target: string, offset: number): [string, string] {
-    const c = [...target]
+    const c = Chars.create(target)
     let w = 0
     for (let i = 0; i < c.length; i++) {
         w += Char.width(c[i]!)

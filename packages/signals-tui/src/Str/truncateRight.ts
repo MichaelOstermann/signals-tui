@@ -5,5 +5,5 @@ export function truncateRight(
     width: number,
     value: string = "…",
 ): string {
-    return Chars.truncateRight([...str], width, value).join("")
+    return Chars.truncateRight(Chars.create(str), width, value).join("")
 }

@@ -1,14 +1,17 @@
 import type { Text } from "../Text"
 import type { FrameBuffer } from "./types"
 import { Char } from "../Char"
-import { EMPTY } from "./internals"
+import { Chars } from "../Chars"
+import { EMPTY, WIDE_CONTINUATION } from "./internals"
 
 export function drawText(buffer: FrameBuffer, row: number, col: number, text: Text): number {
     const cells = buffer[row]
     if (!cells) return col
-    const bufferWidth = cells.length
 
-    for (const char of text.value) {
+    const bufferWidth = cells.length
+    const chars = Chars.create(text.value)
+
+    for (const char of chars) {
         const charWidth = Char.width(char)
         if (charWidth === 0) break
         if (col >= bufferWidth) break
@@ -31,7 +34,7 @@ export function drawText(buffer: FrameBuffer, row: number, col: number, text: Te
 
         else if (charWidth === 2) {
             cells[col] = { style: text.style, value: char, width: charWidth }
-            cells[col + 1] = EMPTY
+            cells[col + 1] = WIDE_CONTINUATION
             col += charWidth
         }
     }

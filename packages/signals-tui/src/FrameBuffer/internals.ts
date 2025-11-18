@@ -6,3 +6,9 @@ export const EMPTY: Cell = {
     value: " ",
     width: 1,
 }
+
+export const WIDE_CONTINUATION: Cell = {
+    style: Style.create(),
+    value: "",
+    width: 0,
+}

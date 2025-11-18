@@ -5,5 +5,5 @@ export function truncateLeft(
     width: number,
     value: string = "…",
 ): string {
-    return Chars.truncateLeft([...str], width, value).join("")
+    return Chars.truncateLeft(Chars.create(str), width, value).join("")
 }

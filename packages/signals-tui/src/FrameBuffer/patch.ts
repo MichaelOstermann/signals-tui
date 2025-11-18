@@ -30,7 +30,7 @@ function patchRow(next: Cell[], prev: Cell[]): string {
     for (let col = 0; col < next.length; col++) {
         const prevCell = prev[col] ?? EMPTY
         const nextCell = next[col]!
-        if (nextCell.style === prevCell.style && nextCell.value === prevCell.value) skip(delta)
+        if (nextCell.style === prevCell.style && nextCell.value === prevCell.value) skip(delta, nextCell)
         else push(delta, nextCell)
     }
 
@@ -39,8 +39,8 @@ function patchRow(next: Cell[], prev: Cell[]): string {
         : delta.patch
 }
 
-function skip(delta: Delta): void {
-    delta.skip++
+function skip(delta: Delta, cell: Cell): void {
+    delta.skip += cell.width
     if (delta.style) delta.patch += Ansi.reset
     delta.style = ""
 }
