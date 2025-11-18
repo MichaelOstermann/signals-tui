@@ -18,5 +18,6 @@ export * from "./Style"
 export * from "./Table"
 export * from "./Term"
 export * from "./Text"
+export * from "./types"
 
 export const text = Text.create
