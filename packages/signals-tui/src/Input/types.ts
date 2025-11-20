@@ -1,4 +1,4 @@
-import type { MaybeReactive, Memo, ReadonlySignal, Signal } from "@monstermann/signals"
+import type { MaybeReactive, Memo, Signal } from "@monstermann/signals"
 import type { Element, ElementOptions } from "../Element"
 import type { Text } from "../Text"
 
@@ -12,8 +12,8 @@ export interface Input extends Element {
     index: Memo<number>
     line: Memo<Text[]>
     offset: Signal<number>
-    prevCol: ReadonlySignal<number>
-    prevRow: ReadonlySignal<number>
+    prevCol: Signal<number>
+    prevRow: Signal<number>
     scroll: Signal<number>
     value: Memo<string>
     render: () => void

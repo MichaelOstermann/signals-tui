@@ -65,12 +65,6 @@ export function create(options: InputOptions = {}): Input {
         ))
     })
 
-    effect(() => {
-        if (input.isFocused()) return
-        prevCol(Term.col())
-        prevRow(Term.row())
-    })
-
     function render(): void {
         Term.drawLine(input.row(), input.col(), input.line())
 
