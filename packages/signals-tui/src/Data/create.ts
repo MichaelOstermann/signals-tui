@@ -37,7 +37,7 @@ function tokenize(value: any, t: Tokenizer): void {
     else if (type === "String") {
         t.token({ type: "Quote", value: `"` })
         if (value.length > 10 && !t.isParentExpanded())
-            t.token({ type: "String", value: `${value.slice(0, 10)}…` })
+            t.token({ type: "String", value: `${value.slice(0, 10)}… ` })
         else
             t.token({ type: "String", value })
         t.token({ type: "Quote", value: `"` })
@@ -90,7 +90,7 @@ function tokenize(value: any, t: Tokenizer): void {
 
         else if (!isParentExpanded) {
             t.token({ type: "Bracket", value: "{" })
-            t.token({ type: "Punctuation", value: "…" })
+            t.token({ type: "Punctuation", value: "… " })
             t.token({ type: "Bracket", value: "}" })
         }
 
@@ -98,7 +98,7 @@ function tokenize(value: any, t: Tokenizer): void {
             t.token({ type: "Bracket", value: "{" })
             for (let i = 0; i < keys.length; i++) {
                 if (!isExpanded && i === 5) {
-                    t.token({ type: "Punctuation", value: "…" })
+                    t.token({ type: "Punctuation", value: "… " })
                     break
                 }
                 const key = keys[i]!
@@ -137,7 +137,7 @@ function tokenize(value: any, t: Tokenizer): void {
 
         else if (!isParentExpanded) {
             t.token({ type: "Bracket", value: "[" })
-            t.token({ type: "Punctuation", value: "…" })
+            t.token({ type: "Punctuation", value: "… " })
             t.token({ type: "Bracket", value: "]" })
         }
 
@@ -148,7 +148,7 @@ function tokenize(value: any, t: Tokenizer): void {
                 const end = Math.min(i + chunkSize - 1, length - 1)
                 const isFirst = start === 0
                 const isLast = end === length - 1
-                const key = `[${start}…${end}]`
+                const key = `[${start}… ${end}]`
                 t.enter(key)
                 if (isFirst) t.indent()
                 t.newline()
@@ -169,7 +169,7 @@ function tokenize(value: any, t: Tokenizer): void {
             t.token({ type: "Bracket", value: "[" })
             for (let i = 0; i < length; i++) {
                 if (!isExpanded && i === 5) {
-                    t.token({ type: "Punctuation", value: "…" })
+                    t.token({ type: "Punctuation", value: "… " })
                     break
                 }
                 const isFirst = i === 0

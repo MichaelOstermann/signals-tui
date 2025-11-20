@@ -5,7 +5,7 @@ import { width as getWidth } from "./width"
 export function truncateRight(
     chars: readonly string[],
     width: number,
-    value: string = "…",
+    value: string = "… ",
 ): readonly string[] {
     const currentWidth = getWidth(chars)
     if (currentWidth <= width) return chars

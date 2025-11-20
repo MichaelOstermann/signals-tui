@@ -7,7 +7,7 @@ import { width as getWidth } from "./width"
 export function truncateLeft(
     line: Text[],
     width: number,
-    value: string = "…",
+    value: string = "… ",
     style?: Style,
 ): Text[] {
     const currentWidth = getWidth(line)
