@@ -1,5 +1,6 @@
 {
   "lockfileVersion": 1,
+  "configVersion": 0,
   "workspaces": {
     "": {
       "devDependencies": {
@@ -18,7 +19,7 @@
     },
     "packages/signals-tui": {
       "name": "@monstermann/signals-tui",
-      "version": "0.1.0",
+      "version": "0.2.0",
       "dependencies": {
         "@monstermann/signals": "^0.0.0",
         "@types/node": "^24.10.1",
